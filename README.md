@@ -65,9 +65,7 @@ http://localhost:5173
 
 ---
 
-## ⚙️ Backend (Planned / Conceptual)
-
-> ⚠️ Note: Backend is **not yet implemented** in this repository. This section describes the intended design.
+## ⚙️ Backend 
 
 ### Proposed Tech Stack
 
@@ -76,7 +74,7 @@ http://localhost:5173
 * WebSocket support (for real-time emotion updates)
 * ML Libraries: TensorFlow / PyTorch / OpenCV
 
-### Planned Responsibilities
+### Responsibilities
 
 * Receive text input from frontend
 * Process sentiment analysis
@@ -84,7 +82,7 @@ http://localhost:5173
 * Perform facial emotion recognition
 * Return emotion metadata to frontend
 
-### Example API Design (Planned)
+### Example API Design 
 
 ```
 POST /api/emotion/text
