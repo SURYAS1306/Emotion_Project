@@ -1,73 +1,154 @@
-# Welcome to your Lovable project
+# Emotion-Adaptive Content System
 
-## Project info
+An interactive web application that adapts visual content based on detected user emotions. The system demonstrates how emotion signals (from text and facial expressions) can be used to dynamically modify UI behavior, improving emotional awareness in digital conversations.
 
-**URL**: https://lovable.dev/projects/e815d3f5-d933-4ea5-ade6-31be781e7088
+---
 
-## How can I edit this code?
+## 🚀 Project Overview
 
-There are several ways of editing your application.
+In most chat-based systems, emotions are often lost because text does not convey facial expressions or tone. This project addresses that gap by:
 
-**Use Lovable**
+* Analyzing **user text input** for sentiment
+* (Planned) Analyzing **facial expressions** using webcam input
+* Dynamically adapting UI elements such as **text color, theme, and feedback** based on detected emotion
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/e815d3f5-d933-4ea5-ade6-31be781e7088) and start prompting.
+Currently, the repository contains the **frontend implementation**, while the **backend is designed and documented for future integration**.
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## 🧩 Architecture (Planned)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+```
+Frontend (React + Vite)
+        |
+        | REST API
+        v
+Backend (Node.js / Python – Planned)
+        |
+        v
+ML Models (Emotion & Sentiment Analysis)
+```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 🖥️ Frontend (Implemented)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Tech Stack
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+* React
+* Vite
+* TypeScript
+* Tailwind CSS
+* shadcn/ui
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Features
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+* User input interface
+* Emotion-based UI changes (simulated)
+* Modular component structure
+* Responsive design
+
+### Running the Frontend Locally
+
+```bash
+git clone https://github.com/SURYAS1306/Emotion_Project.git
+cd Emotion_Project
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Open in browser:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```
+http://localhost:5173
+```
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## ⚙️ Backend (Planned / Conceptual)
 
-## What technologies are used for this project?
+> ⚠️ Note: Backend is **not yet implemented** in this repository. This section describes the intended design.
 
-This project is built with:
+### Proposed Tech Stack
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+* Node.js (Express) **or** Python (FastAPI)
+* REST APIs
+* WebSocket support (for real-time emotion updates)
+* ML Libraries: TensorFlow / PyTorch / OpenCV
 
-## How can I deploy this project?
+### Planned Responsibilities
 
-Simply open [Lovable](https://lovable.dev/projects/e815d3f5-d933-4ea5-ade6-31be781e7088) and click on Share -> Publish.
+* Receive text input from frontend
+* Process sentiment analysis
+* Capture webcam frames (with user permission)
+* Perform facial emotion recognition
+* Return emotion metadata to frontend
 
-## Can I connect a custom domain to my Lovable project?
+### Example API Design (Planned)
 
-Yes, you can!
+```
+POST /api/emotion/text
+POST /api/emotion/facial
+GET  /api/emotion/status
+```
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+---
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## 🧠 Emotion Detection Logic (Concept)
+
+| Input Type | Technique Used               |
+| ---------- | ---------------------------- |
+| Text       | NLP sentiment analysis       |
+| Face       | CNN-based emotion classifier |
+
+Detected emotions include:
+
+* Happy
+* Sad
+* Angry
+* Neutral
+* Stressed
+
+---
+
+## 🎨 UI Adaptation Examples
+
+| Emotion | UI Behavior                  |
+| ------- | ---------------------------- |
+| Happy   | Bright colors, positive tone |
+| Sad     | Muted colors, softer UI      |
+| Angry   | Warm tones, alert indicators |
+| Neutral | Default theme                |
+
+---
+
+## 🔮 Future Enhancements
+
+* Full backend integration
+* Real-time webcam emotion tracking
+* Emotion history & analytics dashboard
+* Accessibility-based UI adaptations
+* Deployment with Docker
+
+---
+
+## 📚 Use Cases
+
+* Emotion-aware chat applications
+* Mental health monitoring tools
+* E-learning platforms
+* User experience research
+
+---
+
+## 👨‍💻 Author
+
+**Surya Srinivasan**
+B.Tech Computer Science Engineering
+VIT Vellore
+
+---
+
+## 📜 License
+
+This project is for academic and learning purposes.
